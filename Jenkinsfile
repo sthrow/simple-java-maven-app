@@ -12,8 +12,6 @@ pipeline {
             }
             steps {
 				echo "Hello, ${PERSON}, nice to meet you."
-            }
-            steps {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
