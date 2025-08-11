@@ -11,8 +11,8 @@ pipeline {
             //    }
             //}
             steps {
-				//echo "Hello, ${PERSON}, nice to meet you."
-                sh 'mvn -B -DskipTests clean package'
+				echo "User selected ${params.branchName}"
+                //sh 'mvn -B -DskipTests clean package'
             }
         }
     }
