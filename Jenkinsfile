@@ -2,9 +2,9 @@ pipeline {
 	agent any
     stages {
 		stage("Condition check") {
-			when {
-				expression {${params.branchName} ==~ "refs/heads/release/1.0.x"}
-			}
+			//when {
+			//	expression {${params.branchName} ==~ "refs/heads/release/1.0.x"}
+			//}
 			steps {
 				echo "Condition satisfied"
 			}
