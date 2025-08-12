@@ -10,6 +10,9 @@ pipeline {
 			//		string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
             //    }
             //}
+            when {
+				branch pattern: "^origin\/release\/\d+\.\d+\.x", comparator: "REGEXP"
+			}
             steps {
 				echo "User selected ${params.branchName}"
                 //sh 'mvn -B -DskipTests clean package'
