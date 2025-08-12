@@ -11,6 +11,7 @@ pipeline {
             //    }
             //}
             when {
+				echo branch
 branch pattern: "^origin/release/d+\.d+\.x", comparator: "REGEXP"
 			}
             steps {
