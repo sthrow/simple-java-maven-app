@@ -20,7 +20,9 @@ pipeline {
             steps {
 				echo "User selected ${params.branchName}"
                 //sh 'mvn -B -DskipTests clean package'
-                script buildSpecFile: 'CICD/CI-BuildSpec.yaml'
+                script {
+					buildSpecFile: 'CICD/CI-BuildSpec.yaml'
+				}
             }
         }
     }
