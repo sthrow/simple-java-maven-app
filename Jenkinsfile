@@ -11,7 +11,7 @@ pipeline {
             //    }
             //}
             when {
-				branch pattern: "^origin\/release\/\d+\.\d+\.x", comparator: "REGEXP"
+branch pattern: "^origin/release/d+\.d+\.x", comparator: "REGEXP"
 			}
             steps {
 				echo "User selected ${params.branchName}"
