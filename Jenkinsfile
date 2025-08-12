@@ -22,7 +22,7 @@ pipeline {
                 //sh 'mvn -B -DskipTests clean package'
                 script {
 					//if ("${env.Java_Version}" == 'OpenJDK-11') {
-					if ("${params.branchName}" == "refs/heads/release/1.0.x") {
+					if ("${params.branchName}" == "/refs/heads/release/1.0.x") {
 						echo "matched"
 					} else {
 						echo "no match"
