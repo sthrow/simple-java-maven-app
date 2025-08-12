@@ -3,7 +3,7 @@ pipeline {
     stages {
 		stage("Condition check") {
 			when {
-				not expression {${params.branchName} == "refs/heads/release/1.0.x"}
+				expression {${params.branchName} == "refs/heads/release/1.0.x"}
 			}
 			steps {
 				echo "Condition satisfied"
