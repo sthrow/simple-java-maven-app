@@ -13,7 +13,7 @@ pipeline {
             when {
 				//echo "${params.branchName}"
 				//echo "${branch}"
-				expression { BRANCH_NAME ==~ /(production|staging)/ }
+				expression { ${params.branchName} ==~ /(production|staging)/ }
 				//${params.branchName} pattern: "^origin/release/d+\.d+\.x", comparator: "REGEXP"
 			}
             steps {
