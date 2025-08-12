@@ -7,7 +7,7 @@ pipeline {
 			}
 			steps {
 				echo "Condition satisfied"
-				echo branch
+				//echo branch
 			}
 		}
         stage('Build') {
