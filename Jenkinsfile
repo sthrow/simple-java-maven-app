@@ -2,9 +2,6 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-			steps {
-				echo "building ..."
-			}
             when {
 				//echo "${params.branchName}"
 				//echo "${branch}"
@@ -15,9 +12,6 @@ pipeline {
 				echo "User selected ${params.branchName}"
                 //sh 'mvn -B -DskipTests clean package'
             }
-            steps {
-				echo "build finished ..."
-			}
         }
     }
 }
