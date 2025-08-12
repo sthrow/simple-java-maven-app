@@ -3,11 +3,10 @@ pipeline {
     stages {
 		stage("Condition check") {
 			when {
-				not {branch "refs/heads/release/1.0.x"}
+				not {${params.branchName} == "refs/heads/release/1.0.x"}
 			}
 			steps {
 				echo "Condition satisfied"
-				echo "for ${branch}"
 			}
 		}
         stage('Build') {
