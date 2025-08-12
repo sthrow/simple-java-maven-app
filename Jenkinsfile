@@ -2,8 +2,8 @@ pipeline {
 	agent any
     stages {
 		stage("Condition check") {
-			not when {
-				branch "refs/heads/release/1.0.x"
+			when {
+				not {branch "refs/heads/release/1.0.x"}
 			}
 			steps {
 				echo "Condition satisfied"
