@@ -5,7 +5,7 @@ pipeline {
             when {
 			//	//echo "${params.branchName}"
 			//	//echo "${branch}"
-			branch "refs/remotes/origin/release/*"
+			NOT {branch "refs/remotes/origin/release/*"}
 			//	expression { ${params.branchName} ==~ refs/heads/release/1.0.x }
 			//	//${params.branchName} pattern: "^origin/release/d+\.d+\.x", comparator: "REGEXP"
 			}
