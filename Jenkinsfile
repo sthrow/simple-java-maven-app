@@ -29,7 +29,7 @@ pipeline {
     //}
      				if (branchName ==~ /^refs\/heads\/release\/\d+\.\d+\.y/) {
 					//if (branchName ==~ ^refs/heads/release/1.0.x) {
-						echo "matched"
+						echo "matched ${branchName}"
 					} else {
 						echo "no match"
 					}
