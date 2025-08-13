@@ -25,7 +25,7 @@ pipeline {
 	//					echo "This is a feature branch."
     //    // Perform feature branch specific actions
     //}
-					if ("${params.branchName}" == refs/heads/release/1.0.x) {
+					if ("${params.branchName}" == "refs/heads/release/1.0.x") {
 						echo "matched"
 					} else {
 						echo "no match"
