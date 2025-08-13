@@ -17,6 +17,7 @@ pipeline {
 			//	expression { ${params.branchName} ==~ refs/heads/release/1.0.x }
 			//	//${params.branchName} pattern: "^origin/release/d+\.d+\.x", comparator: "REGEXP"
 			//}
+			def branchName = params.branchName
             steps {
 				echo "User selected ${params.branchName}"
                 //sh 'mvn -B -DskipTests clean package'
@@ -25,7 +26,7 @@ pipeline {
 	//					echo "This is a feature branch."
     //    // Perform feature branch specific actions
     //}
-					if ("${params.branchName}" == "refs/heads/release/1.0.x") {
+					if (branchName == refs/heads/release/1.0.x) {
 						echo "matched"
 					} else {
 						echo "no match"
