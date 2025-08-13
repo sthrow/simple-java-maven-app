@@ -21,7 +21,7 @@ pipeline {
 				echo "User selected ${params.branchName}"
                 //sh 'mvn -B -DskipTests clean package'
                 script {
-					if ("${params.branchName} ==~ /refs/heads/release/\d+\.\d+\.x") {
+					if ("${params.branchName} ==~ /refs/heads/release/1\.0\.x") {
 						echo "matched"
 					} else {
 						echo "no match"
