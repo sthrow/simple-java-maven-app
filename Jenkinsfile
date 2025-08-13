@@ -27,7 +27,8 @@ pipeline {
 	//					echo "This is a feature branch."
     //    // Perform feature branch specific actions
     //}
-					if (branchName == refs/heads/release/1.0.x) {
+     				if (branchName ==~ /^refs\/heads\/release\/.*/) {
+					//if (branchName ==~ ^refs/heads/release/1.0.x) {
 						echo "matched"
 					} else {
 						echo "no match"
